@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import store from './store'
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
-import './App.css';
-import Homepage from './components/Homepage'
+import HeaderNav from './containers/HeaderNav/HeaderNav'
+import {SideBar} from './containers/SideBar/SideBar'
+import { Home } from './containers/Home/Home'
+import './containers/Home/Home.scss'
 
 
 class App extends Component {
@@ -11,7 +13,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          <Route path="/" exact component={Homepage} />
+          <HeaderNav/>
+          <SideBar/>
+          <Home />
         </div>
       </Provider>
     );
