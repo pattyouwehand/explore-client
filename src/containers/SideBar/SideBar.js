@@ -12,7 +12,7 @@ export class SideBar extends React.Component {
         <SideBarItem label='Followers' icon='spy'/>
         <SideBarItem label='History' icon='history'/>
         <SideBarItem label='Watch later' icon='clock'/>
-        <SideBarItem label='Liked videos' icon='thumps up'/>
+        <SideBarItem label='Liked videos' icon='thumbs up'/>
         <SideBarItem label='Movies and shows' icon='film'/>
         <SideBarItem label='Report history' icon='flag'/>
         <SideBarItem label='Help' icon='help circle'/>
