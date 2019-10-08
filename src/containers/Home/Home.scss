@@ -1,11 +1,7 @@
 @import '../../styles/shared.scss';
 
 .home {
-  margin-top: $header-nav-height;
   margin-left: $sidebar-left-width;
-  display: grid;
-  grid: auto / auto;
-  justify-content: center;
 }
 @media all and (min-width: 476px) {
   .responsive-video-grid-container {
