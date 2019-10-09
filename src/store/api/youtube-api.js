@@ -76,5 +76,5 @@ function createResource(properties) {
       }
     };
   }
-  return resource;
+  return resource
 }
