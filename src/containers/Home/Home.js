@@ -1,17 +1,15 @@
 import React from 'react';
 import './Home.scss';
-import {VideoGrid} from '../../components/VideoGrid/VideoGrid';
+
 import {SideBar} from '../SideBar/SideBar';
+import {HomeContent} from './HomeContent/HomeContent';
 
 export class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
         <SideBar/>
-        <div className='home'>
-          <VideoGrid title='Trending'/>
-          <VideoGrid title='Autos & Vehicles' hideDivider={true}/>
-        </div>
+        <HomeContent/>
       </React.Fragment>
     );
   }
