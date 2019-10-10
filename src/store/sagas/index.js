@@ -2,15 +2,15 @@ import {all, call, put, fork} from 'redux-saga/effects'
 import {watchMostPopularVideos, watchMostPopularVideosByCategory, watchVideoCategories} from './video'
 
 export default function* () {
+  console.log('start sagas')
   yield all([
     fork(watchMostPopularVideos),
-    // fork(watchVideoCategories),
+    //fork(watchVideoCategories),
     fork(watchMostPopularVideosByCategory)
   ])
 }
 
-/*
- entity must have a success, request and failure method */
+/* entity must have a success, request and failure method */
 
 export function* fetchEntity(request, entity, ...args) {
   try {

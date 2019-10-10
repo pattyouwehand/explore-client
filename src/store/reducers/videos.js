@@ -108,6 +108,7 @@ export const getMostPopularVideos = createSelector(
   getMostPopular,
   (videosById, mostPopular) => {
     if (!mostPopular || !mostPopular.items) {
+      console.log('its me, again')
       return [];
     }
     return mostPopular.items.map(videoId => videosById[videoId]);

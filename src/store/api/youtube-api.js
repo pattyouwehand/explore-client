@@ -1,9 +1,10 @@
 export function buildMostPopularVideosRequest(amount = 12, loadDescription = false, nextPageToken) {
+  console.log('buildMostPopularVideosRequest')
   let fields = 'nextPageToken,prevPageToken,items(contentDetails/duration,id,snippet(channelId,channelTitle,localized/title,publishedAt,thumbnails/medium,title),statistics/viewCount),pageInfo(totalResults)';
   if (loadDescription) {
     fields += ',items/snippet/description';
   }
-  return buildApiRequest('GET',
+  const data = buildApiRequest('GET',
     '/youtube/v3/videos',
     {
       part: 'snippet,statistics,contentDetails',
@@ -13,6 +14,8 @@ export function buildMostPopularVideosRequest(amount = 12, loadDescription = fal
       pageToken: nextPageToken,
       fields,
     }, null);
+console.log('data', data)
+    return data
 }
 
 
@@ -21,6 +24,8 @@ export function buildApiRequest(requestMethod, path, params, properties) {
   let request;
   if (properties) {
     let resource = createResource(properties);
+    debugger
+    console.log('hello, its me your looking for', window.gapi)
     request = window.gapi.client.request({
       'body': resource,
       'method': requestMethod,
