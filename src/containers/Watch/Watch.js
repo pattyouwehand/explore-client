@@ -11,7 +11,7 @@ export class Watch extends React.Component {
   render() {
     return (
       <div className='watch-grid'>
-        <Video className='video' id='7rqeEwxnBJU' />
+        <Video className='video' id='TfAPuWq8P7w' />
         <VideoMetadata className='metadata' viewCount={2384} />
         <VideoInfoBox className='video-info-box' />
         <Comments className='comments' />
