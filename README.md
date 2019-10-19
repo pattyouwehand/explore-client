@@ -11,8 +11,9 @@ For this application I used Redux Saga and Semantic UI as new technologies.
 * Redux Saga
 * Semantic UI
 
-![](Explore.gif)
+![](explore-responsive.gif)
 
+![](explore-video-detail.gif)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
